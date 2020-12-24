@@ -372,14 +372,11 @@ transform: translate(-50%, -70%);
  #avatar1 {
  border-radius: 50%;
  }
- #footer {
-  background: silver;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 10px;
- }
+
+#footer {
+position:fixed;bottom:0;
+font-family: helvetica, arial;
+}
 </style>
   </div> <!-- Style                                                  -->
   <div id = "navbar">
@@ -459,6 +456,10 @@ transform: translate(-50%, -70%);
   <div id = "secretpage">
     <h1 id = "secret" >You Found A Secret Good Job!!!</h1> 
   </div> <!-- Secret                                                 -->
+ <div id = "footer1">
+   <h6 id = "footer"></h6>  
+  </div> <!-- Footer                                                 -->
+
   <div id = "jsid">
    <noscript>
     <div style="position: fixed; top: 0px; left: 0px; z-index: 3000; 
@@ -468,6 +469,12 @@ transform: translate(-50%, -70%);
 </noscript>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+ function copyright() {
+  var d = new Date();
+  var n = d.getFullYear();
+  document.getElementById("footer").innerHTML = "&copy 2020-" + n + " Clovenbob";
+}
+copyright();
 $("#load").show();
 $("#home, #navbar, #videopage, #profile, #text2, #secretpage, #secretbtn, #codepage").hide();
 
