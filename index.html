@@ -480,11 +480,9 @@ font-family: helvetica, arial;
   document.getElementById("footer").innerHTML = "&copy 2020-" + n + " Clovenbob";
 }
 copyright();
- function loading {
-  $("#loading").hide();
- }
+ 
 $("#load").show();
-$("#home, #navbar, #videopage, #profile, #text2, #secretpage, #secretbtn, #codepage").hide();
+$("#home, #navbar, #videopage, #profile, #text2, #secretpage, #secretbtn, #codepage, #loading").hide();
 
 $("#button").on("click", function(){
 $("#load").hide();
